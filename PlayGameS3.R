@@ -9,6 +9,6 @@
 #' @author David R. Miller
 #' 
 
-PlayGame <- function(x){
+PlayGame <- function(x){ # creating a generic for PlayGame
   UseMethod("PlayGame")
 }

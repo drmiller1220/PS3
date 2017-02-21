@@ -14,6 +14,11 @@
 #' @author David R. Miller
 #' 
 
-PlayGame.default <- function(x){
+PlayGame.default <- function(x){ # because PlayGame is only useful for an object of
+  # class 'door,' we want to help the user understand why an object that is not of 
+  # class 'door' does not allow them to play the game; thus, the default method 
+  # for PlayGame (which, in effect, is the method for all non-door objects); thus,
+  # the default method for PlayGame merely tells the user that they must have a 
+  # door object
   print("Input must be of class 'door' in order to play 'Let's Make a Deal'")
 }

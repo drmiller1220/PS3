@@ -16,18 +16,18 @@
 #' @author David R. Miller
 #' 
 
-setGeneric("PlayGame",
-           function(object="door"){
-             standardGeneric("PlayGame")
+setGeneric("PlayGame", # creating the generic PlayGame generic
+           function(object="door"){ # specifying that, when object is 'door'...
+             standardGeneric("PlayGame") #set the generic as PlayGame
            }
 )
 
-setMethod("PlayGame",
+setMethod("PlayGame", 
           "door",
-          function(object){
-            selected_door <- object@door
-            winning_door <- sample(x=1:3, size=1, replace=FALSE)
-            if(selected_door==winning_door){
+          function(object){ # if PlayGame is applied to an object of 'door'...
+            winning_door <- sample(x=1:3, size=1, replace=FALSE) # sample a winning door
+            if(object@door ==winning_door){ # check if selected door is the winning door,
+              # and print appropriate notifications
               print("Congratulations, you've just won a yuge, classy, fantastic new car!")
             } else {
               print("What a loser, you picked a goat!  Sad!")

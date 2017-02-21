@@ -12,10 +12,13 @@
 #'
 
 
-door <- function(x){
-  if(length(x)==1 & x %in% c(1,2,3)){
-    structure(as.vector(x), class="door")
-  } else {
+door <- function(x){ # initializing function to create door object
+  if(length(x)==1 & x %in% c(1,2,3)){ # if statement evaluating whether the input is of
+    # length one AND if the input is 1, 2, or 3
+    structure(x, class="door")
+    # if the input meets the conditions, we assign it class `door'
+  } else { # if the input fails one of the conditions, we throw an error explaining
+    # why the input is invalid
     stop("User must select only one of the following numeric door values: 1, 2, or 3")
   }
 }

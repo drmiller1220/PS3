@@ -11,8 +11,10 @@ door2 <- door(2)
 door3 <- door(3)
 
 # failing to create door objects for inputs which are not single integers
+
 doorz <- door("z")
 door_vector <- door(c(1,2,4,4))
+door_matrix <- door(matrix(1:10, 2))
 
 # play let's make a deal with door objects
 
